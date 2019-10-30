@@ -94,6 +94,15 @@ const data = [
     secondParagraph: `Lambda has a new group of students from Kenya.Ac orci phasellus egestas tellus rutrum tellus pellentesque. Fusce ut placerat orci nulla pellentesque dignissim. Odio ut sem nulla pharetra diam. Id eu nisl nunc mi ipsum. Non diam phasellus vestibulum lorem. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse in est ante in nibh mauris cursus mattis molestie. Neque sodales ut etiam sit amet. Posuere ac ut consequat semper viverra nam libero justo laoreet. `,
 
     thirdParagraph: `Lambda has a new group of students from Kenya.Ac orci phasellus egestas tellus rutrum tellus pellentesque. Fusce ut placerat orci nulla pellentesque dignissim. Odio ut sem nulla pharetra diam. Id eu nisl nunc mi ipsum. Non diam phasellus vestibulum lorem. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse in est ante in nibh mauris cursus mattis molestie. Neque sodales ut etiam sit amet. Posuere ac ut consequat semper viverra nam libero justo laoreet.`
+  },
+  {
+    title: 'Lambda wins most innovative company 2019 awards ',
+    date: 'Sept 1st, 2019',
+    firstParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis.  `,
+
+    secondParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis. `,
+
+    thirdParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis..`
   }
 
 ];
