@@ -85,7 +85,26 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Lambda in Kenya ',
+    date: 'Aug 1st, 2019',
+    firstParagraph: `Lambda has a new group of students from Kenya.Ac orci phasellus egestas tellus rutrum tellus pellentesque. Fusce ut placerat orci nulla pellentesque dignissim. Odio ut sem nulla pharetra diam. Id eu nisl nunc mi ipsum. Non diam phasellus vestibulum lorem. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse in est ante in nibh mauris cursus mattis molestie. Neque sodales ut etiam sit amet. Posuere ac ut consequat semper viverra nam libero justo laoreet.  `,
+
+    secondParagraph: `Lambda has a new group of students from Kenya.Ac orci phasellus egestas tellus rutrum tellus pellentesque. Fusce ut placerat orci nulla pellentesque dignissim. Odio ut sem nulla pharetra diam. Id eu nisl nunc mi ipsum. Non diam phasellus vestibulum lorem. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse in est ante in nibh mauris cursus mattis molestie. Neque sodales ut etiam sit amet. Posuere ac ut consequat semper viverra nam libero justo laoreet. `,
+
+    thirdParagraph: `Lambda has a new group of students from Kenya.Ac orci phasellus egestas tellus rutrum tellus pellentesque. Fusce ut placerat orci nulla pellentesque dignissim. Odio ut sem nulla pharetra diam. Id eu nisl nunc mi ipsum. Non diam phasellus vestibulum lorem. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Suspendisse in est ante in nibh mauris cursus mattis molestie. Neque sodales ut etiam sit amet. Posuere ac ut consequat semper viverra nam libero justo laoreet.`
+  },
+  {
+    title: 'Lambda wins most innovative company 2019 awards ',
+    date: 'Sept 1st, 2019',
+    firstParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis.  `,
+
+    secondParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis. `,
+
+    thirdParagraph: `Sed cras ornare arcu dui vivamus. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Enim lobortis scelerisque fermentum dui faucibus. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tellus mauris a diam maecenas sed. Etiam sit amet nisl purus in mollis. Id velit ut tortor pretium. Augue mauris augue neque gravida. Quam quisque id diam vel quam elementum pulvinar etiam non. Et ultrices neque ornare aenean euismod elementum nisi quis..`
   }
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -111,4 +130,46 @@ const data = [
 
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
+  </div>
+
 */
+ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph){
+   const article= document.createElement('div');
+   const articleTitle = document.createElement('h2');
+   const articleDate= document.createElement('p');
+   const articleParagraph1 = document.createElement('p');
+   const articleParagraph2 = document.createElement('p');
+   const articleParagraph3 = document.createElement('p');
+   const articleExpandButton = document.createElement('span');
+
+  article.append(articleTitle);
+  article.append(articleDate);
+  article.append(articleParagraph1);
+  article.append(articleParagraph2);
+  article.append(articleParagraph3);
+  article.append(articleExpandButton);
+
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  articleExpandButton.classList.add('expandButton');
+
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  articleParagraph1.textContent = firstParagraph;
+  articleParagraph2.textContent = secondParagraph;
+  articleParagraph3.textContent = thirdParagraph;
+  articleExpandButton.textContent = '\u25BC';
+  
+  
+  articleExpandButton.addEventListener('click', (event)=>{
+    article.classList.toggle('article-open');
+    console.log("I am a span that's clicked");
+  })
+ 
+  return article;
+ }
+ const articles = document.querySelector('.articles');
+
+ data.forEach((article)=> {
+  articles.append(createArticle(article.title, article.date, article.firstParagraph, article.secondParagraph, article.thirdParagraph));
+ })
